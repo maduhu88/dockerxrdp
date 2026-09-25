@@ -1,7 +1,7 @@
-FROM kalilinux/kali-rolling:latest
+FROM parrotsec/core:latest
 RUN dpkg --add-architecture i386
 RUN apt update
-RUN DEBIAN_FRONTEND=noninteractive apt install wine qemu-kvm *zenhei* xz-utils dbus-x11 curl firefox-esr gnome-system-monitor mate-system-monitor  git xfce4 xfce4-terminal tightvncserver wget   -y
+RUN DEBIAN_FRONTEND=noninteractive apt install wine qemu-kvm *zenhei* xz-utils dbus-x11 curl firefox-esr gnome-system-monitor mate-system-monitor  git xfce4 xfce4-panel xfce4-goodies xfce4-terminal tightvncserver wget   -y
 RUN wget https://github.com/novnc/noVNC/archive/refs/tags/v1.2.0.tar.gz
 RUN tar -xvf v1.2.0.tar.gz
 RUN mkdir  $HOME/.vnc
